@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: 'Nunito', sans-serif;
+}
 
 header,
  nav,
@@ -16,14 +19,13 @@ header {
   background-color: rgb(245, 248, 250);
   position: fixed;
   z-index: 1;
-  font-family: 'Nunito', sans-serif;
+  top: 0;
+  left: 0;
 }
-
 
 nav {
   background-color: white;
-  top: 75px;
-  position: relative;
+  margin-top: 75px;
 }
 
 .contenitore {
@@ -49,15 +51,13 @@ nav {
 }
 
 .sinistro ul li,
-.destro li {
+.destro ul li {
   display: inline-block;
-  list-style-type: none;
 }
 
 .sinistro ul li:last-child {
 margin-left: 30px;
 }
-
 
 .sinistro {
 float: left;
@@ -65,18 +65,35 @@ float: left;
 
 .destro {
 float: right;
+text-align: right;
 }
 
 #login {
-  color: #ff7a59;;
+  color: #ff7a59;
   background: white;
   border: 1px solid #ff7a59;
 }
 
-#spotfree {
+#spotfree,
+.learn {
   color: white;
   background: #ff7a59;
   border: 1px solid #ff7a59;
+}
+
+#login:hover {
+  background-color: #ffebe6;
+}
+
+#spotfree:hover,
+.learn:hover {
+  color: #ffebe6;
+  background-color: #ff8566;
+}
+
+#access:hover,
+#spotfree2:hover {
+  background-color: #f2f2f2;
 }
 
 #login,
@@ -85,14 +102,6 @@ float: right;
   padding: 10px 15px;
   margin-left: 20px;
   border-radius: 3px;
-}
-
-header::after,
-nav::after,
-.barra_access_now::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 .nav_sinistro {
@@ -108,10 +117,12 @@ nav::after,
   width: 60%;
   height: 100%;
   background-color: white;
+  text-align: right;
 }
-.nav_sinistro a img {
+
+.nav_sinistro img {
   height: 75px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .nav_destro ul li
@@ -129,27 +140,230 @@ nav::after,
 
 .promo_bar {
   background-color: #33475b;
-  float: left;
-  position: relative;
-  top: 75px;
 }
 
 .bar_access {
-  position: relative;
-  display: inline-block;
   line-height: 75px;
   text-align: center;
-  left: 25%;
-  font-family: 'Nunito', sans-serif;
   color: white;
 }
 
 #access {
   background-color: white;
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
-.primo_blocco {
-  background-color: rgb(0, 149, 179);
-  /* height: 2000px; */
+.disegno {
+ background-image: url("disegno.jpg");
+ width:1899px;
+ height:745px;
+}
+
+.free {
+  float: left;
+  width: 38%;
+  height: 745px;
+}
+
+div.free {
+ color: white;
+}
+
+div.molto_grande {
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+#spotfree2 {
+  color: #33475b;
+  font-size: 20px;
+  background: white;
+  padding: 25px 40px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.cubo {
+  background-color: rgb(245, 248, 250);
+  width: 100%;
+  height: auto;
+}
+
+.cubo::after {
+content: "";
+display: table;
+clear: both;
+}
+
+.imgcubo {
+  margin: auto;
+  padding: 100px 50px;
+  width: 60%;
+  text-align: center;
+  color: #33475b;
+}
+
+.cubocolorato {
+  max-width: 260px;
+}
+
+.imgcubo h5 {
+  padding-top: 15px;
+}
+
+.crm_sinistro {
+  width: 40%;
+}
+
+.crm_destro {
+  width: 60%;
+}
+
+.crm_sinistro,
+.crm_destro {
+  height: 300px;
+  color: #33475b;
+  background-color: white;
+  float: left;
+}
+
+ .crm_sinistro {
+   text-align: center;
+ }
+
+ .crm_destro {
+  padding-top: 50px;
+  padding-bottom:10px;
+  text-align: left;
+ }
+
+.imgcrm {
+ width: 206px;
+ height: 156px;
+ display: block;
+ margin: 20px auto;
+}
+
+.learn {
+   padding: 20px 50px;
+   margin-top: 15px;
+   border-radius: 4px;
+   font-weight: bold;
+}
+
+.crm_destro h1,
+.crm_destro h5,
+.crm_destro h2  {
+  margin-bottom: 20px;
+}
+
+.color {
+  color: #ff7a59;
+}
+
+.crm_destro ul li {
+  display: inline-block;
+}
+
+.crm_destro ul li:not(:first-child) {
+  margin-left: 15px;
+}
+
+.marketing,
+.sales,
+.service {
+  background-color: white;
+  width: 31%;
+  height: 600px;
+  margin: 12px;
+  float: left;
+  text-align: center;
+  padding: 30px 10px;
+  color: #33475b;
+}
+
+.mss {
+  width: 233px;
+  height: 150px;
+}
+
+.marketing h1,
+.marketing h5,
+.sales h1,
+.sales h5,
+.service h1,
+.service h5 {
+  padding: 10px 0;
+}
+
+.marketing h3,
+.sales h3,
+.service h3 {
+padding-top: 40px;
+}
+
+.marketing ul li,
+.sales ul li,
+.service ul li {
+  padding-top: 10px;
+  text-align: left;
+}
+
+.marketing ul,
+.sales ul ,
+.service ul  {
+list-style-type: none;
+display: inline-block;
+}
+
+.grid {
+background-image: linear-gradient(to top right,#00a4bd,  #00bda5);
+width: 100%;
+height: auto;;
+color: white;
+}
+
+.supporto {
+  width: 60%;
+  height: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.communitygrid,
+.communitygrid_last {
+  position: relative;
+  float: left;
+  width: calc(100% / 4);
+  border-bottom: 1px solid white;
+  width: 270px;
+  height: 184px;
+  color: white;
+}
+
+.communitygrid {
+  border-right: 1px solid white;
+}
+
+.completegrid {
+  display: block;
+  width: 100%
+}
+
+.grid:after {
+  content: "";
+   display: table;
+   clear: both;
+}
+
+.quadrato {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: auto;
+    transform: translateY(-50%);
+    text-align: center;
 }
